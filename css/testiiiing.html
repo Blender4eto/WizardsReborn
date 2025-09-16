@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation Example</title>
+    <style>
+        /* Parent container styling */
+        .parent {
+            position: relative;
+            width: 200px;  /* Starting size for parent */
+            height: 200px; /* Starting size for parent */
+            overflow: hidden;  /* Prevent child from overflowing */
+            background-color: lightblue;  /* Background color for visibility */
+            transition: width 1s ease, height 1s ease; /* Smooth transition for resizing */
+        }
+
+        /* Child element styling */
+        .element {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;  /* Initially visible */
+            visibility: visible;  /* Initially visible */
+            pointer-events: auto;  /* Allow interactions initially */
+            opacity: 1; /* Make it visible initially */
+            transition: opacity 1.5s ease, visibility 0s linear 1.5s; /* Opacity and visibility transition */
+        }
+
+        /* Fade-out animation */
+        @keyframes fadeOut {
+            0% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; display: none; } /* Fade out and hide element */
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; visibility: hidden; display: none; }
+            100% { opacity: 1; visibility: visible; display: block; } /* Fade in and show element */
+        }
+
+        /* Resize parent */
+        .parent:hover {
+            width: 300px;  /* Resize parent on hover */
+            height: 300px; /* Resize parent on hover */
+            animation: none; /* No animation for resizing */
+        }
+
+        /* On hover: Fade-out child and wait for resizing to finish */
+        .parent:hover .element {
+            animation: fadeOut 1.5s forwards;  /* Fade-out starts immediately */
+        }
+
+        /* On unhover: Fade-in child after resizing */
+        .parent:not(:hover) .element {
+            animation: fadeIn 1.5s forwards;
+            animation-delay: 1s; /* Delay fade-in until resizing completes */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="element">
+            Hover over me!
+        </div>
+    </div>
+
+</body>
+</html>

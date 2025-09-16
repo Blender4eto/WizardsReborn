@@ -1,0 +1,1019 @@
+@charset "UTF-8";
+
+html
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: system-ui;
+    background-color: #435464;
+}
+body.enlarged
+{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar
+{
+    display:none;
+}
+
+
+
+
+
+
+
+.EnlargedEntrance
+{
+    height: 100vh ;
+    width: 100%;
+    gap:2.6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition:0.8s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/Wizardsrebornbackground.png);
+}
+.EnlargedEntrance.enlarged
+{
+    margin-top:3%;
+    height: 85vh ;
+    width: 87%;
+    border-radius: 30px;
+}
+
+.btn{
+    height: 7vh;
+    width: 40%;
+    font-size:2vw;
+    transition: 0.8s;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #9AA5A9;
+}
+.btn:hover
+{
+    width: 41%;
+    font-size:2.1vw;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+
+.title
+{
+    width:56.7%;
+}
+
+
+
+
+
+
+
+.cards-box
+{
+    height: 85vh;
+    width:75%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1vh;
+}
+.AboutTheMod
+{
+    height:25%;
+    width:100%;
+    font-size:5vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: bold;
+    font-weight: bold;
+}
+.cards-row
+{
+    height:75%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    gap:8.5vw;
+}
+.cards
+{
+    height:100%;
+    width:30vw;
+    padding-left:2.5vw;
+    padding-right:2.5vw;
+    background-color:#CCD0CF;
+    border-radius:30px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-size:1.65vw;
+    text-align: center;
+    font-weight: bold;
+}
+.wrimg
+{
+    width:35%;
+    margin-top:5%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+.navigation-box
+{
+    height: 80vh;
+    width:75%;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    gap:3vw;
+}
+.right-nav
+{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    position: relative;
+}
+.left-nav
+{
+    height: 100%;
+    width: 50%;
+    gap:3vw;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+}
+.right-left
+{
+    height: 100%;
+    width: 45.5%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+}
+.left-bottom
+{
+    height: 44.5%;
+    width: 100%;
+    position:absolute;
+    bottom:0;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+
+.c
+{
+    border-radius:20px;
+    z-index: 1;
+    transition: 0.8s;
+}
+.items
+{
+    border-radius:20px;
+}
+.items  p
+{
+    margin: 0;
+    padding: 0;
+}
+@keyframes fadeIn 
+{
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeOut
+{
+    100% { opacity: 0; display:none;}
+    50% { opacity: 0; }
+    0% { opacity: 1; }
+}
+
+
+.right-card
+{
+    height: 100%;
+    width: 45.5%;
+    right: 0;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:2.5vh;
+    transition: 0.8s ease-in-out;
+    transform-origin: right;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Workbenches/Workbenches-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 94%;
+    background-size: 85%;
+}
+.right-card:hover
+{   
+    width: 100%;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 50% 5%;
+    background-size: 90%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.right-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.right-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+.Tall-Workbenches
+{
+    width:100%;
+    height:auto;
+    max-height: 79.5%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 60%, transparent 100%);
+}
+.right-card:hover .Tall-Workbenches
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+.item1
+{
+    margin-top:23%;
+    height:7%;
+    width:92%;
+    background-color: #CCD0CF;
+}
+.right-card:hover .r1
+{
+    width: 100%;
+    font-size:0.8vw;
+    text-align: center;
+    margin-top:1%;
+}
+.item2
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.right-card:hover .Workbench-img
+{
+    height: 80%;
+    margin-left:2.5%;
+}
+.right-card:hover .r2
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: left;
+    margin-right:2%;
+    margin-left:2%;
+}
+.item3
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.right-card:hover .Crystalizer-img
+{
+    height: 80%;
+    margin-right:2.5%;
+}
+.right-card:hover .r3
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: right;
+    margin-right:2%;
+    margin-left:2%;
+}
+.item4
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.right-card:hover .Wissen-Altar-img
+{
+    height: 80%;
+    margin-left:2.5%;
+}
+.right-card:hover .r4
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: left;
+    margin-right:2%;
+    margin-left:2%;
+}
+
+
+
+.right-left-bottom-card
+{
+    height: 27%;
+    width: 100%;
+    bottom:0;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    transition: 0.8s ease-in-out;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Arcanum/Arcanum-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 90%;
+    background-size: 60%;
+}
+.right-left-bottom-card:hover
+{
+    height: 100%;
+    z-index:2;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 50% 3%;
+    background-size: 90%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.right-left-bottom-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.right-left-bottom-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+.Arcanum-img
+{
+    width:100%;
+    height:auto;
+    max-height: 79.5%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 55%, transparent 100%);
+}
+.right-left-bottom-card:hover .Arcanum-img
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+
+.right-left-bottom-card:hover .Tall-Arcanum-img
+{
+    width:100%;
+    margin-top:auto;
+    mask-image: linear-gradient(0deg,black 80%, transparent 100%);
+}
+.itemrlb1
+{
+    height:14%;
+    width:92%;
+    margin-top:27%;
+    border-radius: 10px;
+    background-color: #CCD0CF;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.right-left-bottom-card:hover .rlb1
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: center;
+    margin-right:2%;
+    margin-left:2%;
+}
+
+
+
+.right-left-top-card
+{
+    height: 66%;
+    width: 100%;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    transition: 0.8s ease-in-out;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Trinkets/Trinkets-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 95%;
+    background-size: 60%;
+}
+.right-left-top-card:hover
+{
+    height: 100%;
+    z-index:3;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 50% 3%;
+    background-size: 90%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.right-left-top-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.right-left-top-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+.Tall-Trinkets-img
+{
+    width:100%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 55%, transparent 100%);
+}
+.right-left-top-card:hover .Tall-Trinkets-img
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+.right-left-top-card:hover .Tall-Trinkets-inside-img
+{
+    width:100%;
+    margin-top:auto;
+    mask-image: linear-gradient(0deg,black 80%, transparent 100%);
+}
+.itemrlt1
+{
+    height:15%;
+    width:92%;
+    margin-top:27%;
+    border-radius: 10px;
+    background-color:#CCD0CF;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.right-left-top-card:hover .rlt1
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: center;
+    margin-right:2%;
+    margin-left:2%;
+}
+
+
+
+.left-top-card
+{
+    height: 48%;
+    width: 100%;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:2.5vh;
+    transition: 0.8s ease-in-out;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Alchemy/Alchemy-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 95%;
+    background-size: 55%;
+}
+.left-top-card:hover
+{
+    height: 100%;
+    z-index:4;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 50% 3.5%;
+    background-size: 80%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.left-top-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.left-top-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+
+.Wide-Alchemy
+{
+    width:100%;
+    height:auto;
+    max-height: 79.5%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 55%, transparent 100%);
+}
+.left-top-card:hover .Wide-Alchemy
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+.itemlt1
+{
+    margin-top:21%;
+    height:9%;
+    width:92%;
+    background-color: #CCD0CF;
+}
+.left-top-card:hover .lt1
+{
+    width: 100%;
+    font-size:0.8vw;
+    text-align: center;
+    margin-top:1%;
+}
+.itemlt2
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.left-top-card:hover .Furnace-img
+{
+    height: 80%;
+    margin-left:2.5%;
+}
+.left-top-card:hover .lt2
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: left;
+    margin-right:2%;
+    margin-left:2%;
+}
+.itemlt3
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.left-top-card:hover .Alchemy-Machine-img
+{
+    height: 80%;
+    margin-right:2.5%;
+}
+.left-top-card:hover .lt3
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: right;
+    margin-right:2%;
+    margin-left:2%;
+}
+.itemlt4
+{
+    height:20%;
+    width:92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCD0CF;
+}
+.left-top-card:hover .Fluid-Storage-img
+{
+    height: 80%;
+    margin-left:2.5%;
+}
+.left-top-card:hover .lt4
+{
+    width: auto;
+    font-size:0.8vw;
+    text-align: left;
+    margin-right:2%;
+    margin-left:2%;
+}
+
+
+
+.left-bottom-right-card
+{
+    height: 100%;
+    width: 45.5%;
+    right:0;
+    position:absolute;
+    display:flex;
+    flex-direction: row;
+    gap:2.5vh;
+    transition: 0.8s ease-in-out;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Automation/Automation-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 95%;
+    background-size: 80%;
+}
+.left-bottom-right-card:hover
+{
+    width: 100%;
+    z-index:4;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 5% 6%;
+    background-size: 55%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.left-bottom-right-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.left-bottom-right-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+.Automation-img
+{
+    width:100%;
+    height:auto;
+    max-height: 79.5%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 55%, transparent 100%);
+}
+.left-bottom-right-card:hover .Automation-img
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+.left-bottom-right-card:hover .Tall-Automation-img
+{
+    height: 100%;
+    margin-left:auto;
+    mask-image: linear-gradient(270deg,black 30%, transparent 100%);
+}
+.left-bottom-right-card:hover .itemlbr1
+{
+    height: 60%;
+    width:50%;
+    margin-top:16.5%;
+    margin-left:3.5%;
+    background-color:#CCD0CF;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.lbr1
+{
+    width: 90%;
+    font-size:0.8vw;
+    text-align: center;
+}
+
+
+
+.left-bottom-left-card
+{
+    height: 100%;
+    width: 45.5%;
+    position:absolute;
+    display:flex;
+    flex-direction: row;
+    transition: 0.8s ease-in-out;
+    background-color:#CCD0CF;
+    background-image:url(../images/Navigation/Totems/Totems-Title.png);
+    background-repeat:no-repeat;
+    background-position: 50% 95%;
+    background-size: 55%;
+}
+.left-bottom-left-card:hover
+{
+    width: 100%;
+    z-index:4;
+    border-style:solid;
+    border-width: 5%;
+    border-color:#4a5c6a;
+    background-color: #9AA5A9;
+    background-position: 14.5% 8.5%;
+    background-size: 40%;
+    box-shadow: 0 0 10px #11212D, 0 0 40px #253745, 0 0 60px #4a5c6a;
+}
+.Totems-img
+{
+    width:100%;
+    height:auto;
+    max-height: 79.5%;
+    border-radius:20px 20px 0 0 ;
+    animation: fadeIn 1.5s forwards;
+    mask-image: linear-gradient(180deg,black 55%, transparent 100%);
+}
+.left-bottom-left-card:hover .Totems-img
+{
+    animation: fadeOut 0.3s forwards;
+    opacity: 0;
+}
+.left-bottom-left-card .items
+{
+    display:none;
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+}
+.left-bottom-left-card:hover .items
+{
+    font-size: clamp(6px, 0.8vw, 16px);
+    display:flex;
+}
+.lbl1
+{
+    width: 90%;
+    font-size:0.8vw;
+    text-align: center;
+}
+.test1
+{
+    height: 60%;
+    width:50%;
+    margin-top:16.5%;
+    margin-left:3.5%;
+    background-color:#CCD0CF;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.left-bottom-left-card:hover .Tall-Totems-img
+{
+    height: 100%;
+    margin-left:auto;
+    mask-image: linear-gradient(270deg,black 30%, transparent 100%);
+}
+
+
+
+
+
+
+
+
+.WhereToDownload
+{
+    height: 40vh;
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.WhereToDownload-text
+{
+    width:100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size:5vw;
+    text-align: center;
+    font-style: bold;
+    font-weight: bold;
+}
+.butt-row
+{
+    width:100%;
+    height: 50%;
+    gap:6vw;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+.buttn
+{
+    height:60%;
+    width: 28.5%;
+    padding-left:1.3%;
+    gap:8%;
+    border-radius:20px;
+    transition:0.8s;
+    position:absolute;
+    cursor:pointer;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    background-color:#CCD0CF;
+}
+.modrinth:hover,.curseforge:hover,.discord:hover
+{
+    height:61%;
+    width: 29.5%;
+}
+.modrinth
+{
+    left:0;
+}
+.curseforge
+{
+    left:50%;
+    transform: translate(-50%, 0%);
+}
+.discord
+{
+    right:0;
+}
+.buttt
+{
+    font-size:2.3vw;
+    text-align: center;
+    font-weight: bold;
+}
+.mrimg
+{
+    height: 80%;
+    border-radius:20px;
+}
+.cfimg
+{
+    height: 80%;
+    border-radius:20px;
+}
+.dsimg
+{
+    height: 80%;
+    border-radius:20px;
+}
+
+
+
+
+
+
+
+
+.downloads
+{
+    height: 40vh;
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.Downloads-text
+{
+    font-size:5vw;
+    text-align: center;
+    font-style: bold;
+    font-weight: bold;
+}
+.Downloads-count
+{
+    font-size:5vw;
+    text-align: center;
+    font-style: bold;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.footer
+{
+    height: 25vh;
+    width:85%;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    gap:5%;
+    border-radius:20px 20px 0 0 ;
+    background-color:#9AA5A9;
+}
+.footer-title
+{
+    padding-left:2.1%;
+    width:32%;
+}
+.dividing-line
+{
+    height: 60%;
+    width:0.5%;
+    border-radius:30px;
+    background-color: #435464;
+}
+.information
+{
+    height:10vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    gap:15%;
+    font-size:1vw;
+    font-style: bold;
+    font-weight: bold;
+}
+.social
+{
+    height: 20vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:7%;
+}
+.social-icons
+{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:10%;
+}
+.social-support
+{
+    font-size:1vw;
+    font-style: bold;
+    font-weight: bold;
+}
+.footer-facebook
+{
+    width:2.3vw;
+}
+.footer-istagram
+{
+    width:2.25vw;
+}
+.footer-twitter
+{
+    width:2.5vw;
+}
+.footer-in
+{
+    width:2.32vw;
+}
